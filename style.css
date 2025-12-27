@@ -6,16 +6,16 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
+    --primary-color: #06b6d4;
+    --secondary-color: #14b8a6;
+    --accent-color: #0284c7;
     --dark-bg: #0f172a;
     --darker-bg: #020617;
     --card-bg: #1e293b;
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
-    --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    --gradient: linear-gradient(135deg, #06b6d4 0%, #14b8a6 50%, #0284c7 100%);
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
@@ -333,14 +333,32 @@ section {
     background: var(--darker-bg);
 }
 
+.about-text {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
 .about-text p {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 1.9;
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.about-text p:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--secondary-color);
+}
+
+.about-text strong {
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 .about-stats {
@@ -380,6 +398,7 @@ section {
 /* Skills Section */
 .skills-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
@@ -417,17 +436,17 @@ section {
 }
 
 .tag {
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(6, 182, 212, 0.1);
     color: var(--text-secondary);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    border: 1px solid rgba(99, 102, 241, 0.3);
+    border: 1px solid rgba(6, 182, 212, 0.3);
     transition: all 0.3s ease;
 }
 
 .tag:hover {
-    background: rgba(99, 102, 241, 0.2);
+    background: rgba(6, 182, 212, 0.2);
     border-color: var(--primary-color);
     color: var(--text-primary);
     transform: translateY(-2px);
